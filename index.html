@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Guide de survie</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -25,8 +25,444 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+
+
+        <section>
+          <h1>Guide de survie en territoire tech</h1>
+          <h3>Comprendre le code</h3>
+          <aside class="notes">
+            Aujourd'hui c'est important de comprendre le code. Nous allons voir les bases basiques dans le domaine.
+          </aside>
+
+        </section>
+
+
+        <section>
+          <h2>Aujourd'hui</h2>
+          <h3>Petit cours</h3>
+        </section>
+
+
+        <section>
+          <h2>Problématique d'aujourd'hui</h2>
+          <blockquote>
+            &ldquo;Comment donner en 1h un cours de survie en territoire tech pour mieux comprendre les enjeux de développement moderne&rdquo;
+          </blockquote>
+
+          <aside class="notes">
+            Ce petit cours de 1h vous permettra de comprendre les bases basiques de la culture générale du code. Puis nous vous donnerons des ressources si vous voulez aller plus loin.
+          </aside>
+
+        </section>
+
+        <section>
+          <h2>Qu'est-ce qu'un langage de programmation ?</h2>
+          <p>Un langage de programmation permet de "parler" à son ordinateur et lui demander d'exécuter des tâches. Tout langage de programmation est ensuite compilé en binaire afin que l'ordinateur le comprenne.</p>
+
+          <aside class="notes">
+            Exemples de tâches : afficher "bonjour monde", créér un nouveau dossier, ajouter une adresse email à un utilisateur en base de données.
+            Pourquoi binaire btw ? Pck à la base, un ordinateur est un circuit électronique amélioré, et qu'un circuit électronique ne connait que deux états : allumé, ou éteint. D'où 0 et 1. Enfin 2⁴ == 16
+          </aside>
+        </section>
+
+        <section>
+          <h2>Exemple langages</h2>
+          <p>Exemple de langages : C, C++, Java, Ruby, Python</p>
+          <p>
+            HTML et CSS ne sont pas des langages de programmation
+          </p>
+
+          <aside class="notes">
+            HTML est un langage de balisage et CSS un langage informatique. Ces deux derniers ne permettent pas de faire de la programmation
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Front, Back, Framework ?</h2>
+          <h3>Jargons expliqués</h3>
+        </section>
+
+        <section>
+          <h2>Back-end</h2>
+          <p> C'est le plus commun, ce sont les programmes qui permettent d'exécuter du code qui fera des opérations et algorithmes.</p>
+          <p>
+            Exemples langages de back-end : C, C++, Java, Ruby, Python
+          </p>
+
+          <aside class="notes">
+            On reviendra sur chaque langage.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Back-end</h2>
+          <p>Quelle est la différence entre les langages de back-end ? Pourquoi défendre un langage, c'est comme défendre son équipe de foot préférée ?</p>
+          <p>
+            Exemples de points de différenciations entre langages de programmations : Haut niveau, ou bas niveau ; Statique ou dynamique ; portabilité ? Orienté objet ?
+          </p>
+
+          <aside class="notes">
+            Bas niveau : plomberie, mais maîtrise totale de ce que nous faisons. Statique : les variables ne peuvent être assignées qu'à un seul type de données : moins pratique, mais moins prône à l'erreur. Cela reste technique
+          </aside>
+        </section>
+
+        <section>
+          <h2>Front-end</h2>
+          <p>La partie visible de l'iceberg. Toutes les parties <i>front</i> de sites, jeux-vidéos, applications, sont codées avec des langage de Front-end, qui sont exécutés par le navigateur (Chrome, Windows, iPhone, etc)</p>
+          <p>
+            Exemples langages front-end : HTML / CSS / JavaScript
+          </p>
+
+          <aside class="notes">
+            Les langages sont exécutés par notre navigateur. C'est à dire qu'il nous envoie tout le code, et en échange affiche un joli site. C'est pour cela que l'on parle de problème de compatibilité, ou que l'on trashe IE6. 
+          </aside>
+        </section>
+
+        <section>
+          <h2>Différences entre langages</h2>
+          <ul>
+            <li><b>HTML</b> : fait le squelette</li>
+            <li><b>CSS</b> : fait la mise en forme du site</li>
+            <li><b>JavaScript</b> : fait l'animation du site en fonction de ce que fait l'utilisateur</li>
+          </ul>
+
+          <aside class="notes">
+            Exemple page web : si on prend le site du monde, tout le texte des articles est en HTML. Puis le CSS dit "tel article est là". Enfin, le JS est là pour par exemple nous rappeler à l'ordre si on utilise adblock, avec un truc du genre if adblock enabled, send popup.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Exemple : Comment marche un site</h2>
+          <ul>
+            <li>facebook.com est différent pour tout le monde</li>
+            <li>Quand un user arrive sur facebook.com, le site va chercher sur ses serveurs tous les posts de ses amis</li>
+            <li>Ensuite, le site va appliquer dans son back-end un algorithme qui va selon lui sortir les résultats qu'il estime les plus pertinents</li>
+            <li>Enfin, le back-end va envoyer ceci convertit en HTML/CSS/JS pour que le Chrome (ou autre) de l'utilisateur l'exécute</li>
+          </ul>
+
+          <aside class="notes">
+            Si tu vas sur fb.com, tout le monde aura un truc différent. Quand tu arrives, le site va exécuter du code en backend, en cherchant dans sa base tous les posts. Il applique sur tous les posts un algo qui lui semble pertinent, puis les renvoie sous forme de html css js
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>La programmation web</h2>
+          <p>
+            Pour faire tourner les serveurs et donc le back-end d'un site, il faut des langages spécialisés pour faire le lien entre le back-end et le front-end.
+          </p>
+          <p>
+            Exemples langages web : Node.js, PHP, Rails, Django
+          </p>
+
+          <aside class="notes">
+            On peut faire tourner un site en C, mais c'est mieux d'utiliser dans langages spécialisés car ces derniers mâchent le travail du développeur
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Serveurs ?</h2>
+          <p>
+            Certains sites n'ont pas besoin de back-end, donc tout le code sera exécuté par le navigateur de l'utilisateur. On dit qu'ils sont statiques.
+          </p>
+          <p>
+            En revanche, dès qu'un site a un backend, il faut une machine pour faire tourner le code : c'est le rôle des serveurs. On dit qu'ils sont dynamiques
+          </p>
+
+          <aside class="notes">
+            En général, quand toutes les url de tout un site renvoient à chaque fois la même page à tout le monde, ce site est statique (exemple : ta landing, qui sera la même pour tout le monde). En revanche, dès que tu dois afficher une page différente en fonction de paramètres prédéfinis, le site est dynamique. Exemple : facebook, gmail
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Les datas ?</h2>
+          <p>
+            Quand on créé un utilisateur sur le site, ses informations (emails, adresse, etc) sont stockées dans des bases de données. Une BDD est grosso-modo une ribambelle de classeurs excels reliés entre eux. Facebook a par exemple une table utilisateurs, et une table messages. Un utilisateur peut avoir plusieurs messages, mais un message n'a qu'un seul expéditeur.
+          </p>
+          <p>
+            SQL est généralement utilisé pour la data.
+          </p>
+
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section>
+          <h2>Framework ? Library ?</h2>
+          <p>
+            Les frameworks sont en quelque sorte des extensions de langages qui mâchent le travail des développeurs.
+          </p>
+          <p>
+            Les libraries font ça, mais pour des problématiques plus localisées. Un framework pourra être considéré comme un langagze à part entière, tandis qu'une library non.
+          </p>
+          <aside class="notes">
+            exemples langages et comment ils boostent le travail. Rails, Django, Bootstrap, jQuery. Library : Twitter, BeautifoulSoup
+          </aside>
+        </section>
+
+        <section>
+          <h2>Listing des langages</h2>
+          <h3>À quoi ils servent ?</h3>
+        </section>
+
+
+        <section>
+          <h2>Assembleur</h2>
+          <p>
+            Le langage le plus bas-niveau qui soit. Assembleur est l'un des premiers langages créé. Très très peu de gens codent en Assembleur, et c'est vraiment un langage de barbus. Utilisé pour les hardware.
+          </p>
+          <aside class="notes">
+            niveau d'après : binaire
+          </aside>
+        </section>
+
+        <section>
+          <h2>C</h2>
+          <p>
+            Un langage très bas-niveau, très rapide à l'exécution, très lent à écrire. C est compilé, ce qui veut dire qu'il est converti 
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+        <section>
+          <h2>C++ / C# / Objective C</h2>
+          <p>
+            C++ / C# / Objective C sont à C ce que C est à l'Assembleur. Ce sont des langages versatiles, puissants pour faire tout type d'app. Windows est codé en C++, macOS en Objective C (avec un peu de C)
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+        <section>
+          <h2>Java</h2>
+          <p>
+            Un langage extrêmement populaire, Java a l'avantage de pouvoir tourner sur quasimment n'importe quelle machine. 
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Python</h2>
+          <p>
+            Plus haut niveau, et plus lent que les langages ci-haut, Python se distingue pour sa simplicité, où les devs passeront plus de temps à se soucier de leurs algorithmes, que des troubles de programmation. C'est un lanage très populaire plesbiscité par la communauté des chercheurs (donc a plein de libraries de data science)
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+        <section>
+          <h2>Django</h2>
+          <p>
+            Django est un framework qui permet d'ajouter une fonctionnalité très intéressante à Python : faire du web
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+        <section>
+          <h2>Ruby</h2>
+          <p>
+            Ruby est très similaire à Python : un langage haut-niveau qui se distingue pour sa simplicité. Moins populaire que Python, il a l'avantage d'avoir un framewok très puissant (Rails), et de vouloir le bonheur du développeur.
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Go</h2>
+          <p>
+            Go est un langage très récent qui est très bas-niveau, mais apporte une syntaxe moderne à des équivalents comme C. 
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Swift</h2>
+          <p>
+            Swift est un langage de programmation développé par Apple. Il sert à développer des apps iOS, macOS, etc  
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>PHP</h2>
+          <p>
+            PHP est un langage spécialisé pour faire du web. Il était très hype vers 2004, mais maintenant c'est devenu une blague. Récemment, ses deux framework Symphony et Laravel ont bien grimpé en popularité. 
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Javascript</h2>
+          <p>
+            LE langage le plus hype du moment. Désigné en 10 jours, son omniprésence dans le web en a fait un langage indispensable dans la carrière d'un dev. Voici quelques frameworks : 
+          </p>
+          <ul>
+            <li>jQuery : permet de manipuler les éléments d'une page web</li>
+            <li>Node : permet d'exécuter JavaScript en tant que langage de back-end</li>
+            <li>React-Native : permet de développer des applications hybrides iOS / Android</li>
+            <li>Angular : permet de faire des Single Page Application</li>
+          </ul>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+
+        <section>
+          <h2>Comment coder ?</h2>
+          <h3>Dis-moi ce que tu veux faire, je te dirai ton langage</h3>
+        </section>
+
+
+        <section>
+          <h2>Un script pour automatiser des tâches</h2>
+          <p>
+            Ruby et Python 
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Un site sans backend</h2>
+          <p>
+            HTML / CSS / JavaScript
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+
+        <section>
+          <h2>Un site avec backend</h2>
+          <p>
+            HTML / CSS / JavaScript
+          </p>
+          <p>
+            Aussi, un langage de back-end : PHP, Laravel, Symphony, Node, Rails, Django
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Une app iOS</h2>
+          <p>
+            Swift, ou React-Native
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Une app Android</h2>
+          <p>
+            Java, ou React-Native
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Une app desktop</h2>
+          <p>
+            Java ou C# pour Windows, ou Swift pour macOS
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+        <section>
+          <h2>Un jeu vidéo</h2>
+          <p>
+            Un peu de tout, mais C++ est une référence pour les jeux AAA
+          </p>
+          <aside class="notes">
+            
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Aller plus loin</h2>
+          <h3>Tu veux apprendre à coder ?</h3>
+        </section>
+
+
+        <section>
+          <h2>Des bases basiques</h2>
+          <ul>
+            <li><a href="https://www.udemy.com/automate/" target="_blank">Automate Boring Stuff with Python</a>, à mixer avec des side projects que tu trouves cool</li>
+            <li><a href="https://www.vikingcodeschool.com/posts/the-beginner-s-dilemma-your-first-100-hours-of-code" target="_blank">The Beginner’s Dilemma: Your First 100 Hours of Code</a></li>
+
+          </ul>
+          <aside class="notes">
+            Ce n'est pas ce que l'on recommande
+          </aside>
+        </section>
+
+        <section>
+          <h2>Des bases solides</h2>
+          <ul>
+            <li><a href="http://thehackingproject.org/" target="_blank">The_Hacking_Project</a></li>
+            <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+            <li><a href="https://www.lewagon.com/fr" target="_blank">Le Wagon</a></li>
+
+          </ul>
+          <aside class="notes">
+            On recommande, à la fin tu seras autonome et tu pourras postuler à un taff de dev
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>Devenir dev</h2>
+          <ul>
+            <li><a href="http://www.42.fr/" target="_blank">42</a></li>
+            <li>Bosser 6 mois en stage dev après l'une des recommandations de "bases solides"</li>
+
+          </ul>
+          <aside class="notes">
+          </aside>
+        </section>
+
+
 			</div>
 		</div>
 
